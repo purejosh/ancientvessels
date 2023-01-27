@@ -13,11 +13,11 @@ build/
 .project
 .vscode/
 *.bbproject
-*.mcreator
-mcreator.gradle
 
 # MCreator workspace
 .mcreator/
+mcreator.gradle
+*.mcreator
 
 # Minecraft client/server files
 run/
