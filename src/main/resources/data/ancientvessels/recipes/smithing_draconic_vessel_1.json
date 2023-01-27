@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "ancientvessels:ancient_vessel"
+  },
+  "addition": {
+    "item": "ancientvessels:draconic_soul_orb"
+  },
+  "result": {
+    "item": "ancientvessels:draconic_vessel_1"
+  }
+}

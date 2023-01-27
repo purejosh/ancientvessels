@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "ancientvessels:wither_icon"
+    },
+    "title": {
+      "translate": "advancements.adv_wither_energy.title"
+    },
+    "description": {
+      "translate": "advancements.adv_wither_energy.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_wither_energy": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "ancientvessels:adv_find_vessel"
+}

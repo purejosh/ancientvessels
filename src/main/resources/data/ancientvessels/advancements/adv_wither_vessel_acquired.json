@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "ancientvessels:wither_vessel"
+    },
+    "title": {
+      "translate": "advancements.adv_wither_vessel_acquired.title"
+    },
+    "description": {
+      "translate": "advancements.adv_wither_vessel_acquired.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_wither_vessel_acquired": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancientvessels:wither_vessel"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "ancientvessels:adv_decayed_max_capacity"
+}

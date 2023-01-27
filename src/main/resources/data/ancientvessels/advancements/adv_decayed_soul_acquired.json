@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "ancientvessels:decayed_soul_crystal"
+    },
+    "title": {
+      "translate": "advancements.adv_decayed_soul_acquired.title"
+    },
+    "description": {
+      "translate": "advancements.adv_decayed_soul_acquired.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_decayed_soul_acquired": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancientvessels:decayed_soul_crystal"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "ancientvessels:adv_wither_energy"
+}

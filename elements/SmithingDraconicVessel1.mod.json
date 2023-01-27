@@ -1,0 +1,23 @@
+{
+  "_fv": 38,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:AncientVessel"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:DraconicSoulOrb"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:DraconicVessel1"
+    },
+    "name": "smithing_draconic_vessel_1",
+    "namespace": "mod"
+  }
+}

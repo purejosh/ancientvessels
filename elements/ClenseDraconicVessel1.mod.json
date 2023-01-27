@@ -1,0 +1,23 @@
+{
+  "_fv": 38,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:DraconicVessel1"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.LAVA_BUCKET"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:AncientVessel"
+    },
+    "name": "clense_draconic_vessel_1",
+    "namespace": "mod"
+  }
+}

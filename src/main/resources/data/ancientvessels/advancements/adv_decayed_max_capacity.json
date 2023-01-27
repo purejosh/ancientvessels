@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "ancientvessels:decayed_vessel_3"
+    },
+    "title": {
+      "translate": "advancements.adv_decayed_max_capacity.title"
+    },
+    "description": {
+      "translate": "advancements.adv_decayed_max_capacity.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_decayed_max_capacity": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancientvessels:decayed_vessel_3"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "ancientvessels:adv_decayed_vessel_acquired"
+}

@@ -1,0 +1,25 @@
+{
+  "_fv": 38,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Harvested Draconic Energy",
+    "achievementDescription": "You've successfully harvested some soul energy from the Ender Dragon. Fuse this energy with your Vessel, to increase its power.",
+    "achievementIcon": {
+      "value": "CUSTOM:DraconicSoulOrb"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": true,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 0,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:AdvDragonEnergy"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"46\" y=\"67\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">64</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:DraconicSoulOrb</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+  }
+}

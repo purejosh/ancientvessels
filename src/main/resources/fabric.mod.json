@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "ancientvessels",
+  "version": "1.0.0",
+  "name": "Ancient Vessels",
+  "description": "A long forgotten sword, able to harness the energy of ancient mobs to become even more powerful.",
+  "authors": [
+    "purejosh"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/ancient-vessels-fabric-forge",
+    "sources": ""
+  },
+  "license": "Custom license",
+  "icon": "assets/ancientvessels/icon.png",
+  "accessWidener": "ancientvessels.accesswidener",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.purejosh.ancientvessels.AncientvesselsMod"
+    ],
+    "client": [
+      "net.purejosh.ancientvessels.ClientInit"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "mixins": [
+    "ancientvessels.mixins.json"
+  ]
+}

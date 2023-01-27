@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.purejosh.ancientvessels.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+	"AncientvesselsModRepairItemRecipeMixin"  ],
+  "injectors": {
+	"defaultRequire": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_fv": 38,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Ancient Vessels",
+    "achievementDescription": "After encountering the intense ancient energy of the Ender Dragon, you suddenly feel faint memories of a long lost ancient sword, guarded closely by the Wither Skeletons. ",
+    "achievementIcon": {
+      "value": "Blocks.SKULL#1"
+    },
+    "background": "quartz_bricks.png",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": true,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 0,
+    "achievementType": "task",
+    "parent": {
+      "value": "No parent: root"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"custom_trigger\" x=\"60\" y=\"9\"><next><block type=\"advancement_trigger\" deletable=\"false\"></block></next></block></xml>"
+  }
+}

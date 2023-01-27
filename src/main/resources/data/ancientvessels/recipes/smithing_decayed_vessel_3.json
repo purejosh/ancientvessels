@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "ancientvessels:decayed_vessel_2"
+  },
+  "addition": {
+    "item": "ancientvessels:decayed_soul_crystal"
+  },
+  "result": {
+    "item": "ancientvessels:decayed_vessel_3"
+  }
+}

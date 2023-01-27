@@ -1,0 +1,23 @@
+{
+  "_fv": 38,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Dragon's Curse",
+    "icon": "dragons_curse.png",
+    "color": {
+      "value": -6750055,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "DragonsCurseOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "DragonsCurseEffectExpires"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_fv": 38,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:DecayedVessel3"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:DecayedIngot"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:WitherVessel"
+    },
+    "name": "smithing_wither_vessel",
+    "namespace": "mod"
+  }
+}

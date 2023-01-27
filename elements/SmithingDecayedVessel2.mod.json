@@ -1,0 +1,23 @@
+{
+  "_fv": 38,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:DecayedVessel1"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:DecayedSoulCrystal"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:DecayedVessel2"
+    },
+    "name": "smithing_decayed_vessel_2",
+    "namespace": "mod"
+  }
+}
