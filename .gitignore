@@ -15,9 +15,9 @@ build/
 *.bbproject
 
 # MCreator workspace
+*.mcreator
 .mcreator/
 mcreator.gradle
-*.mcreator
 
 # Minecraft client/server files
 run/
