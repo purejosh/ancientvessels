@@ -19,9 +19,6 @@ import net.purejosh.ancientvessels.init.AncientvesselsModProcedures;
 import net.purejosh.ancientvessels.init.AncientvesselsModMobEffects;
 import net.purejosh.ancientvessels.init.AncientvesselsModItems;
 
-import net.minecraft.nbt.CompoundTag;
-
-import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.api.ModInitializer;
 
 public class AncientvesselsMod implements ModInitializer {
@@ -38,11 +35,5 @@ public class AncientvesselsMod implements ModInitializer {
 
 		AncientvesselsModProcedures.load();
 
-		ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
-			if (handler.getPlayer().getExtraCustomData().getCompound("PlayerPersisted").isEmpty()) {
-				handler.getPlayer().getExtraCustomData().put("PlayerPersisted", new CompoundTag());
-			}
-			AncientvesselsMod.LOGGER.info(handler.getPlayer().getExtraCustomData());
-		});
 	}
 }

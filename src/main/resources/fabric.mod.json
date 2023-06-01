@@ -13,7 +13,6 @@
   },
   "license": "Custom license",
   "icon": "assets/ancientvessels/icon.png",
-  "accessWidener": "ancientvessels.accesswidener",
   "environment": "*",
   "entrypoints": {
     "main": [
