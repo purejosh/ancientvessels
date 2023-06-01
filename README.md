@@ -4,7 +4,7 @@ Ancient Vessels is an end-game weapons mod that introduces a new concept surroun
 
 ## Download
 
-Get the latest download for your mod loader at [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ancient-vessels-fabric-forge/files).
+Get the latest download for your mod loader at [CurseForge](https://www.curseforge.com/minecraft/mc-mods/ancient-vessels-fabric-forge) or [Modrinth](https://modrinth.com/mod/ancient-vessels).
 
 ## Issues or Suggestions
 
