@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ancientvessels:items/wither"
+    "layer0": "ancientvessels:item/wither"
   }
 }

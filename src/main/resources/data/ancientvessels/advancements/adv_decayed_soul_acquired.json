@@ -3,12 +3,8 @@
     "icon": {
       "item": "ancientvessels:decayed_soul_crystal"
     },
-    "title": {
-      "translate": "advancements.adv_decayed_soul_acquired.title"
-    },
-    "description": {
-      "translate": "advancements.adv_decayed_soul_acquired.descr"
-    },
+    "title": "Decayed Energy Harvested",
+    "description": "You've successfully harvested some soul energy from the Wither. Using Blaze Powder, imbue this energy into your Vessel, to increase its power.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

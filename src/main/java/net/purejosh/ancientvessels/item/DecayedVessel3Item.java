@@ -10,10 +10,11 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
@@ -43,9 +44,10 @@ public class DecayedVessel3Item extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.EMPTY;
+				return Ingredient.of();
 			}
-		}, 3, -2.5999999999999999f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
+		}, 3, -2.6f, new Item.Properties().fireResistant());
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
 	}
 
 	@Override
@@ -54,9 +56,8 @@ public class DecayedVessel3Item extends SwordItem {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		Level world = entity.level;
-		VesselLivingEntityIsHitWithToolProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world)
-				.put("x", x).put("y", y).put("z", z).put("entity", entity).put("sourceentity", sourceentity).build());
+		Level world = entity.level();
+		VesselLivingEntityIsHitWithToolProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 

@@ -3,12 +3,8 @@
     "icon": {
       "item": "ancientvessels:wither_icon"
     },
-    "title": {
-      "translate": "advancements.adv_wither_energy.title"
-    },
-    "description": {
-      "translate": "advancements.adv_wither_energy.descr"
-    },
+    "title": "Ancient Decayed Energy",
+    "description": "The ancient energy emitting from the Wither is staggering. Use the Ancient Vessel to kill the Wither, in an attempt to harvest its energy.",
     "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,

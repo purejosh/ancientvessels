@@ -3,12 +3,8 @@
     "icon": {
       "item": "ancientvessels:draconic_vessel_3"
     },
-    "title": {
-      "translate": "advancements.adv_draconic_max_capacity.title"
-    },
-    "description": {
-      "translate": "advancements.adv_draconic_max_capacity.descr"
-    },
+    "title": "Overflowing Draconic Energy",
+    "description": "This Ancient Vessel is overflowing with draconic energy. While powerful, this energy must be contained. To do so, seal the blade with an extremely durable material.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

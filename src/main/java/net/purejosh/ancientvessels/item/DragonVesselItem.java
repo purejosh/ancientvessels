@@ -12,13 +12,14 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
@@ -50,7 +51,8 @@ public class DragonVesselItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(AncientvesselsModItems.DRACONIC_SOUL_ORB));
 			}
-		}, 3, -2.5999999999999999f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
+		}, 3, -2.6f, new Item.Properties().fireResistant());
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
 	}
 
 	@Override
@@ -59,17 +61,15 @@ public class DragonVesselItem extends SwordItem {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		Level world = entity.level;
-		DragonVesselLivingEntityIsHitWithToolProcedure
-				.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("entity", entity).build());
+		Level world = entity.level();
+		DragonVesselLivingEntityIsHitWithToolProcedure.execute(entity);
 		return retval;
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		DragonVesselProjectileProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("x", entity.getX())
-				.put("y", entity.getY()).put("z", entity.getZ()).put("world", world).put("entity", entity).build());
+		DragonVesselProjectileProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return ar;
 	}
 

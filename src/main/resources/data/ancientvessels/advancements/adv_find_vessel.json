@@ -3,13 +3,9 @@
     "icon": {
       "item": "ancientvessels:ancient_vessel"
     },
-    "title": {
-      "translate": "advancements.adv_find_vessel.title"
-    },
-    "description": {
-      "translate": "advancements.adv_find_vessel.descr"
-    },
-    "frame": "task",
+    "title": "An Empty Vessel",
+    "description": "You've finally found an Ancient Vessel! It feels thousands of years old, despite its pristine condition. It appears to be void of ancient energy, however. Search for ancient energy.",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
@@ -19,5 +15,5 @@
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "ancientvessels:adv_unlock_start"
+  "parent": "ancientvessels:adv_learn_ancient_vessel"
 }

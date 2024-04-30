@@ -3,12 +3,8 @@
     "icon": {
       "item": "ancientvessels:wither_vessel"
     },
-    "title": {
-      "translate": "advancements.adv_wither_vessel_acquired.title"
-    },
-    "description": {
-      "translate": "advancements.adv_wither_vessel_acquired.descr"
-    },
+    "title": "The Legendary Wither Vessel",
+    "description": "This Ancient Vessel is overflowing with power, which has been properly contained inside. Harness the power of the Wither by right clicking to unleash a deadly skull attack. Mind the durability!",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

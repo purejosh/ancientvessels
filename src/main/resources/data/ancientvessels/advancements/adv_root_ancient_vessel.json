@@ -1,0 +1,22 @@
+{
+  "display": {
+    "background": "ancientvessels:textures/screens/quartz_bricks.png",
+    "icon": {
+      "item": "ancientvessels:ancient_vessel"
+    },
+    "title": "Ancient Vessels",
+    "description": "Legends tell the tale of an incredibly powerful sword capable of containing and manipulating ancient energies. Investigate these rumors.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "adv_root_ancient_vessel": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:overworld"
+      }
+    }
+  }
+}

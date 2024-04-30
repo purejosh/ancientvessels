@@ -1,7 +1,6 @@
 package net.purejosh.ancientvessels.procedures;
 
 import net.purejosh.ancientvessels.init.AncientvesselsModItems;
-import net.purejosh.ancientvessels.AncientvesselsMod;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -15,55 +14,25 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
-import java.util.Map;
-
 public class DragonVesselProjectileProcedure {
-
-	public static void execute(Map<String, Object> dependencies) {
-		if (dependencies.get("world") == null) {
-			if (!dependencies.containsKey("world"))
-				AncientvesselsMod.LOGGER.warn("Failed to load dependency world for procedure DragonVesselProjectile!");
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
 			return;
-		}
-		if (dependencies.get("x") == null) {
-			if (!dependencies.containsKey("x"))
-				AncientvesselsMod.LOGGER.warn("Failed to load dependency x for procedure DragonVesselProjectile!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			if (!dependencies.containsKey("y"))
-				AncientvesselsMod.LOGGER.warn("Failed to load dependency y for procedure DragonVesselProjectile!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			if (!dependencies.containsKey("z"))
-				AncientvesselsMod.LOGGER.warn("Failed to load dependency z for procedure DragonVesselProjectile!");
-			return;
-		}
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				AncientvesselsMod.LOGGER.warn("Failed to load dependency entity for procedure DragonVesselProjectile!");
-			return;
-		}
-		LevelAccessor world = (LevelAccessor) dependencies.get("world");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
-		Entity entity = (Entity) dependencies.get("entity");
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)
-				.getItem() == AncientvesselsModItems.DRAGON_VESSEL) {
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(),
-						400);
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == AncientvesselsModItems.DRAGON_VESSEL) {
+			if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+				if (entity instanceof Player _player)
+					_player.getCooldowns().addCooldown((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem(), 400);
+			}
 			if (!world.isClientSide()) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, new BlockPos(x, y, z), SoundEvents.ENDER_DRAGON_SHOOT, SoundSource.PLAYERS, (float) 0.6, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.ender_dragon.shoot")), SoundSource.PLAYERS, (float) 0.6, 1);
 					} else {
-						_level.playLocalSound(x, y, z, SoundEvents.ENDER_DRAGON_SHOOT, SoundSource.PLAYERS, (float) 0.6, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.ender_dragon.shoot")), SoundSource.PLAYERS, (float) 0.6, 1, false);
 					}
 				}
 			}
@@ -76,7 +45,7 @@ public class DragonVesselProjectileProcedure {
 			}
 			{
 				Entity _shootFrom = entity;
-				Level projectileLevel = _shootFrom.level;
+				Level projectileLevel = _shootFrom.level();
 				if (!projectileLevel.isClientSide()) {
 					Projectile _entityToSpawn = new Object() {
 						public Projectile getFireball(Level level, Entity shooter, double ax, double ay, double az) {
@@ -87,8 +56,7 @@ public class DragonVesselProjectileProcedure {
 							entityToSpawn.zPower = az;
 							return entityToSpawn;
 						}
-					}.getFireball(projectileLevel, entity, (entity.getLookAngle().x / 10), (entity.getLookAngle().y / 10),
-							(entity.getLookAngle().z / 10));
+					}.getFireball(projectileLevel, entity, (entity.getLookAngle().x / 10), (entity.getLookAngle().y / 10), (entity.getLookAngle().z / 10));
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 0.1, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);

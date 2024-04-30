@@ -3,12 +3,8 @@
     "icon": {
       "item": "ancientvessels:decayed_vessel_1"
     },
-    "title": {
-      "translate": "advancements.adv_decayed_vessel_acquired.title"
-    },
-    "description": {
-      "translate": "advancements.adv_decayed_vessel_acquired.descr"
-    },
+    "title": "Decayed Power Up!",
+    "description": "Your vessel now radiates with Wither energy, but it doesn't appear to be at its full capacity. Continue to fuse it with similar energy.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

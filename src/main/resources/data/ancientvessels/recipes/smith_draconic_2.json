@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:blaze_powder"
+  },
+  "base": {
+    "item": "ancientvessels:draconic_vessel_1"
+  },
+  "addition": {
+    "item": "ancientvessels:draconic_soul_orb"
+  },
+  "result": {
+    "item": "ancientvessels:draconic_vessel_2"
+  }
+}

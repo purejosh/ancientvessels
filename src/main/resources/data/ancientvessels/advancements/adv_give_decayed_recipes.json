@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "adv_give_decayed_recipes": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancientvessels:decayed_soul_crystal"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "ancientvessels:smith_decayed_1",
+      "ancientvessels:smith_decayed_2",
+      "ancientvessels:smith_decayed_3",
+      "ancientvessels:smith_wither_vessel"
+    ]
+  }
+}

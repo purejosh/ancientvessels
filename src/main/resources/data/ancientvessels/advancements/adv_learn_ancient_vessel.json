@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "title": "Ancient Memories",
+    "description": "After encountering the intense ancient energy of the Ender Dragon, you suddenly feel faint memories of a long lost ancient sword, guarded closely by the Wither Skeletons. ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "adv_learn_ancient_vessel": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "ancientvessels:adv_root_ancient_vessel"
+}

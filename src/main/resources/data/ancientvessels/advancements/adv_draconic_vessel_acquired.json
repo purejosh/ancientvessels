@@ -3,12 +3,8 @@
     "icon": {
       "item": "ancientvessels:draconic_vessel_1"
     },
-    "title": {
-      "translate": "advancements.adv_draconic_vessel_acquired.title"
-    },
-    "description": {
-      "translate": "advancements.adv_draconic_vessel_acquired.descr"
-    },
+    "title": "Draconic Power Up!",
+    "description": "Your vessel now radiates with Ender Dragon energy, but it doesn't appear to be at its full capacity. Continue to fuse it with similar energy.",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

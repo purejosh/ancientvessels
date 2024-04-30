@@ -1,20 +1,11 @@
 package net.purejosh.ancientvessels.procedures;
 
-import net.purejosh.ancientvessels.AncientvesselsMod;
-
 import net.minecraft.world.entity.Entity;
 
-import java.util.Map;
-
 public class DragonsCurseEffectExpiresProcedure {
-
-	public static void execute(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				AncientvesselsMod.LOGGER.warn("Failed to load dependency entity for procedure DragonsCurseEffectExpires!");
+	public static void execute(Entity entity) {
+		if (entity == null)
 			return;
-		}
-		Entity entity = (Entity) dependencies.get("entity");
-		entity.getExtraCustomData().putDouble("dragonCurseTick", 0);
+		entity.getPersistentData().putDouble("dragonCurseTick", 0);
 	}
 }

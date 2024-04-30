@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:blaze_powder"
+  },
+  "base": {
+    "item": "ancientvessels:decayed_vessel_1"
+  },
+  "addition": {
+    "item": "ancientvessels:decayed_soul_crystal"
+  },
+  "result": {
+    "item": "ancientvessels:decayed_vessel_2"
+  }
+}

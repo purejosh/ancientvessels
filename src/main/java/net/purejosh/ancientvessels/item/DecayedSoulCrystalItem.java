@@ -8,15 +8,18 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
+
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 import java.util.List;
 
 public class DecayedSoulCrystalItem extends Item {
 	public DecayedSoulCrystalItem() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS).stacksTo(16).rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.UNCOMMON));
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(content -> content.accept(this));
 	}
 
 	@Override
@@ -36,7 +39,6 @@ public class DecayedSoulCrystalItem extends Item {
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
 		if (selected)
-			DecayedSoulCrystalItemInHandTickProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("x", entity.getX())
-					.put("y", entity.getY()).put("z", entity.getZ()).put("world", world).build());
+			DecayedSoulCrystalItemInHandTickProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ());
 	}
 }

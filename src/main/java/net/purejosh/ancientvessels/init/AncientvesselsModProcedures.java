@@ -15,7 +15,6 @@ import net.purejosh.ancientvessels.procedures.DragonVesselLivingEntityIsHitWithT
 import net.purejosh.ancientvessels.procedures.DragonOnDeathEventProcedure;
 import net.purejosh.ancientvessels.procedures.DraconicSoulOrbItemInHandTickProcedure;
 import net.purejosh.ancientvessels.procedures.DecayedSoulCrystalItemInHandTickProcedure;
-import net.purejosh.ancientvessels.procedures.AdvancementUnlockVesselProcedure;
 import net.purejosh.ancientvessels.procedures.AdvancementUnlockEnergySourcesProcedure;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
@@ -32,7 +31,6 @@ public class AncientvesselsModProcedures {
 		new WitherVesselProjectileProcedure();
 		new DragonVesselProjectileProcedure();
 		new DecayedSoulCrystalItemInHandTickProcedure();
-		new AdvancementUnlockVesselProcedure();
 		new AdvancementUnlockEnergySourcesProcedure();
 	}
 }

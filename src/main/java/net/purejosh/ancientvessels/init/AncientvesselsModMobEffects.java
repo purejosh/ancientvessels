@@ -9,13 +9,13 @@ import net.purejosh.ancientvessels.AncientvesselsMod;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
 public class AncientvesselsModMobEffects {
 	public static MobEffect DRAGONS_CURSE;
 
 	public static void load() {
-		DRAGONS_CURSE = Registry.register(Registry.MOB_EFFECT, new ResourceLocation(AncientvesselsMod.MODID, "dragons_curse"),
-				new DragonsCurseMobEffect());
+		DRAGONS_CURSE = Registry.register(BuiltInRegistries.MOB_EFFECT, new ResourceLocation(AncientvesselsMod.MODID, "dragons_curse"), new DragonsCurseMobEffect());
 	}
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ancientvessels:items/decaying_soul_crystal"
+    "layer0": "ancientvessels:item/decaying_soul_crystal"
   }
 }

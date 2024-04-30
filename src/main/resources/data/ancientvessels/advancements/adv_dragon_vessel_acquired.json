@@ -3,12 +3,8 @@
     "icon": {
       "item": "ancientvessels:dragon_vessel"
     },
-    "title": {
-      "translate": "advancements.adv_dragon_vessel_acquired.title"
-    },
-    "description": {
-      "translate": "advancements.adv_dragon_vessel_acquired.descr"
-    },
+    "title": "The Legendary Dragon Vessel",
+    "description": "This Ancient Vessel is overflowing with power, which has been properly contained inside. Harness the power of the Dragon by right clicking to unleash a deadly fireball attack. Mind the durability!",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

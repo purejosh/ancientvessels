@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "ancientvessels:items/ancient_vessel"
+    "layer0": "ancientvessels:item/ancient_vessel"
   }
 }

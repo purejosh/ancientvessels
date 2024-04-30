@@ -12,13 +12,14 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
@@ -50,7 +51,8 @@ public class WitherVesselItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of(new ItemStack(AncientvesselsModItems.DECAYED_SOUL_CRYSTAL));
 			}
-		}, 3, -2.5999999999999999f, new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).fireResistant());
+		}, 3, -2.6f, new Item.Properties().fireResistant());
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
 	}
 
 	@Override
@@ -59,17 +61,15 @@ public class WitherVesselItem extends SwordItem {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		Level world = entity.level;
-		WitherVesselLivingEntityIsHitWithToolProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("world", world)
-				.put("x", x).put("y", y).put("z", z).put("entity", entity).put("sourceentity", sourceentity).build());
+		Level world = entity.level();
+		WitherVesselLivingEntityIsHitWithToolProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		WitherVesselProjectileProcedure.execute(com.google.common.collect.ImmutableMap.<String, Object>builder().put("x", entity.getX())
-				.put("y", entity.getY()).put("z", entity.getZ()).put("world", world).put("entity", entity).build());
+		WitherVesselProjectileProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
 		return ar;
 	}
 
